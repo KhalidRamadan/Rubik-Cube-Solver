@@ -129,10 +129,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Shader.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Texture.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexArray.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBuffer.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Window.cpp" />
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\vision\Scanner.cpp" />
     <ClCompile Include="solver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\test\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Shader.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\stb_image.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Texture.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexArray.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBuffer.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBufferLayout.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Window.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\vision\Scanner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

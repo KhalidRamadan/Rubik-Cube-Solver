@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
-
+#include "vision/Scanner.h"
+#include<iostream>
 
 int main()
 {
-	std::cout << "Hello!!" << std::endl;
+	vision::Scanner scan("Hello");
 
-	system("PAUSE");
+	scan.Update();
 
 	return 0;
 }

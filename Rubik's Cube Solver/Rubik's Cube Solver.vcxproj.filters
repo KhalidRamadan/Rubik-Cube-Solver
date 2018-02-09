@@ -21,5 +21,72 @@
     <ClCompile Include="solver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\vision\Scanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\test\test1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\vision\Scanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBufferLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
