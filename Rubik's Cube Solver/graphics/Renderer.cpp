@@ -26,7 +26,7 @@ namespace graphics
 		va.Bind();
 		vb.Bind();
 		unsigned int count = (4 * vb.GetCount()) / layout.GetStride();
-		std::cout << vb.GetCount() << "  " << layout.GetStride() << std::endl;
+		//std::cout << vb.GetCount() << "  " << layout.GetStride() << std::endl;
 		//std::cout << count << std::endl;
 		GLCall(glDrawArrays(GL_TRIANGLES, 0, count));
 	}

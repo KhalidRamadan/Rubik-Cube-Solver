@@ -1,6 +1,6 @@
 #pragma once
 
-
+#if 0 
 float vertices2[] = {
 	-0.5f, -0.5f, -0.5f,
 	0.5f, -0.5f, -0.5f,
@@ -73,3 +73,21 @@ unsigned int indices[] = {  // note that we start from 0!
 	0, 1, 3,   // first triangle
 	1, 2, 3    // second triangle
 };
+
+float PosX = conterX + m_SideLength;
+float NegX = conterX - m_SideLength;
+float PosY = conterY + m_SideLength;
+float NegY = conterY - m_SideLength;
+float PosZ = conterY;
+float NegZ = conterY;
+
+
+m_Vertices[Zaxis].push_back({ PosX, PosY, PosZ });
+m_Vertices[Zaxis].push_back({ NegX, PosY, PosZ });
+m_Vertices[Zaxis].push_back({ PosX, NegY, PosZ });
+m_Vertices[Zaxis].push_back({ NegX, PosY, PosZ });
+m_Vertices[Zaxis].push_back({ NegX, NegY, PosZ });
+m_Vertices[Zaxis].push_back({ PosX, NegY, PosZ });
+
+
+#endif
