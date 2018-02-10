@@ -81,12 +81,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\GLM\include;$(SolutionDir)\Dependencies\GLFW\include;$(SolutionDir)\Dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\GLM\include;$(SolutionDir)\Dependencies\GLFW\include;$(SolutionDir)\Dependencies\GLEW\include;$(SolutionDir)\Dependencies\GLUT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;STB_IMAGE_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\GLFW\lib;$(SolutionDir)\Dependencies\GLEW\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\GLFW\lib;$(SolutionDir)\Dependencies\GLEW\lib;$(SolutionDir)\Dependencies\GLUT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\Cube.cpp" />
     <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.cpp" />
     <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.cpp" />
     <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.cpp" />
@@ -141,13 +142,18 @@
     <ClCompile Include="solver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\shaders\cubefragment.shader" />
+    <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\shaders\cubevertex.shader" />
     <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\test\test1.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\Cube.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\data.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.h" />
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\graphics.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\IndexBuffer.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Renderer.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Shader.h" />

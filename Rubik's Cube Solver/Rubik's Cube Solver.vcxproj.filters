@@ -16,6 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\packages.config" />
+    <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\shaders\cubevertex.shader" />
+    <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\shaders\cubefragment.shader" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="solver.cpp">
@@ -46,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\Cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,6 +91,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\VertexBufferLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\Cube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
