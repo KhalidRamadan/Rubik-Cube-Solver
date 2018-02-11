@@ -3,14 +3,18 @@
 #include <stdio.h> 
 #include <stdlib.h>  
 
-const glm::vec3 Cube::m_Colors[6] = 
+const glm::vec3 Cube::m_Colors[9] = 
 {
 	glm::vec3(1.0f, 1.0f, 1.0f), // white 
 	glm::vec3(0.0f, 0.0f, 1.0f), // blue
 	glm::vec3(1.0f, 1.0f, 0.0f), // yellow
 	glm::vec3(0.0f, 1.0f, 0.0f), // green
 	glm::vec3(1.0f, 0.0f, 0.0f), // red
-	glm::vec3(1.0f, 0.5f, 0.0f) // orange
+	glm::vec3(1.0f, 0.5f, 0.0f), // orange
+	glm::vec3(0.7f, 0.5f, 0.3f), // todo:: delete
+	glm::vec3(0.3f, 0.3f, 0.3f), // todo:: delete
+	glm::vec3(0.7f, 0.7f, 0.7f) // todo:: delete
+
 };
 
 
@@ -103,6 +107,11 @@ void Cube::CreateFace(std::vector<vertex> &vertices, glm::vec3 vertex)
 
 
 
+void Cube::DrawFace(int face, int x, int y, int z, glm::vec3 Pos, glm::vec3 Neg)
+{
+
+}
+
 
 
 
@@ -111,8 +120,10 @@ void Cube::CreateFace(std::vector<vertex> &vertices, glm::vec3 vertex)
 void Cube::CreateCube()
 {
 	CreateFace(m_Background, glm::vec3(0.5f, 0.5f,  0.5f));
-	CreateFace(m_Background, glm::vec3(0.5f, 0.5f, -0.5f));
+	//CreateFace(m_Background, glm::vec3(0.5f, 0.5f, -0.5f));
 	
+
+
 
 	float conterX = 0, conterY = 0, conterZ = m_Near + 0.001;
 	for (int Zaxis = 0; Zaxis < 2; Zaxis++)
@@ -128,7 +139,7 @@ void Cube::CreateCube()
 				float PosY = conterY + m_SideLength;
 				float NegY = conterY - m_SideLength;
 				float PosZ = conterZ;
-				float NegZ = conterZ - (1 + .002);
+
 
 				m_Vertices[Zaxis].push_back({ PosX, PosY, PosZ });
 				m_Vertices[Zaxis].push_back({ NegX, PosY, PosZ });
@@ -143,75 +154,13 @@ void Cube::CreateCube()
 		}
 		conterZ -= (1 + 0.002);
 	}
-	conterZ = m_Near + 0.001;
-	for (int Zaxis = 0; Zaxis < 2; Zaxis++)
-	{
-		conterY = 2 * m_SideLength + m_Offset;
-		for (int Xaxis = 0; Xaxis < 3; Xaxis++)
-		{
-			conterX = -(2 * m_SideLength + m_Offset);
-			for (int Yaxis = 0; Yaxis < 3; Yaxis++)
-			{
-				float PosX = conterX + m_SideLength;
-				float NegX = conterX - m_SideLength;
-				float PosY = conterY + m_SideLength;
-				float NegY = conterY - m_SideLength;
-				float PosZ = conterZ;
-				float NegZ = conterZ - (1 + .002);
-
-				m_Vertices[Zaxis].push_back({ PosZ, PosY, PosX });
-				m_Vertices[Zaxis].push_back({ PosZ, PosY, NegX });
-				m_Vertices[Zaxis].push_back({ PosZ, NegY, PosX });
-				m_Vertices[Zaxis].push_back({ PosZ, PosY, NegX });
-				m_Vertices[Zaxis].push_back({ PosZ, NegY, NegX });
-				m_Vertices[Zaxis].push_back({ PosZ, NegY, PosX });
-
-				conterX += 2 * m_SideLength + m_Offset;
-			}
-			conterY -= (2 * m_SideLength + m_Offset);
-		}
-		conterZ -= (1 + 0.002);
-	}
-	conterZ = m_Near + 0.001;
-	for (int Zaxis = 0; Zaxis < 2; Zaxis++)
-	{
-		conterY = 2 * m_SideLength + m_Offset;
-		for (int Xaxis = 0; Xaxis < 3; Xaxis++)
-		{
-			conterX = -(2 * m_SideLength + m_Offset);
-			for (int Yaxis = 0; Yaxis < 3; Yaxis++)
-			{
-				float PosX = conterX + m_SideLength;
-				float NegX = conterX - m_SideLength;
-				float PosY = conterY + m_SideLength;
-				float NegY = conterY - m_SideLength;
-				float PosZ = conterZ;
-				float NegZ = conterZ - (1 + .002);
-
-
-				m_Vertices[Zaxis].push_back({ PosX, PosZ, PosY });
-				m_Vertices[Zaxis].push_back({ NegX, PosZ, PosY });
-				m_Vertices[Zaxis].push_back({ PosX, PosZ, NegY });
-				m_Vertices[Zaxis].push_back({ NegX, PosZ, PosY });
-				m_Vertices[Zaxis].push_back({ NegX, PosZ, NegY });
-				m_Vertices[Zaxis].push_back({ PosX, PosZ, NegY });
-
-				conterX += 2 * m_SideLength + m_Offset;
-			}
-			conterY -= (2 * m_SideLength + m_Offset);
-		}
-		conterZ -= (1 + 0.002);
-	}
-	// todo:: write code in better way 
-
-
 }
 
 void Cube::CreateRandomColor()
 {
-	float red = 0.2f;
-	float green = 0.2f;
-	float blue = 0.2f;
+	float red = 0.9f;
+	float green = 0.9f;
+	float blue = 0.9f;
 
 	for (unsigned int i = 0; i < m_Background.size(); i++)
 			m_Background[i].insert(m_Background[i].end(), { red, green, blue });
@@ -223,8 +172,8 @@ void Cube::CreateRandomColor()
 	for (unsigned int layer = 0; layer < 6; layer++)
 		for (unsigned int i = 0; i < m_Vertices[layer].size(); i += 6)
 		{
-			int rands = rand() % 6;
-			for (int k = 0; k < 6; k++)
+			int rands = i / 6;
+			for (unsigned int k = 0; k < 6; k++)
 			{
 				m_Vertices[layer][i + k].insert(m_Vertices[layer][i + k].end(),
 				{ m_Colors[rands].x, m_Colors[rands].y, m_Colors[rands].z }); // color

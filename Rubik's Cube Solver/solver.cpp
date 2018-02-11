@@ -55,19 +55,20 @@ int main()
 		mycube.m_Shader->SetUniformMatrix4fv("view", view);
 
 
+		float angle = 50.0f;
 		while (!mywindow.Closed())
 		{
 			mywindow.Clear();
 			if (mywindow.IsKeyPressed(GLFW_KEY_ESCAPE) == 1) mywindow.Close();
+			if (mywindow.IsKeyPressed(GLFW_KEY_UP)) angle += 0.1f;
+			else if (mywindow.IsKeyPressed(GLFW_KEY_DOWN)) angle -= 0.1f;
 
-			float currentFrame = glfwGetTime();
+			float curangle = glfwGetTime() * angle;
+
 			view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-			mycube.m_Shader->SetUniformMatrix4fv("view", view);
-
-			float angle = 50.0f;
-			angle = glfwGetTime() * angle;
 			model = glm::translate(glm::mat4(), glm::vec3(0.0f, 0.0f, 0.0f));
-			model = glm::rotate(model, glm::radians(angle), glm::vec3(0.5f, 1.0f, 0.0f));
+			model = glm::rotate(model, glm::radians(curangle), glm::vec3(0.5f, 1.0f, 0.0f));
+			mycube.m_Shader->SetUniformMatrix4fv("view", view);
 			mycube.m_Shader->SetUniformMatrix4fv("model", model);
 
 

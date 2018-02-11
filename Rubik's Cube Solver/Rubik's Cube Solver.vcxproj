@@ -147,9 +147,6 @@
     <None Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\test\test1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\Cube.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\cube\data.h" />
     <ClInclude Include="..\..\Rubik%27s Cube Solver\Rubik%27s Cube Solver\graphics\ErrorHandler.h" />

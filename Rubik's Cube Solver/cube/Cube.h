@@ -15,7 +15,7 @@ private:
 	const float m_Near  =	0.5f;  const float m_Far  = -0.5f;
 	unsigned int m_Size = 0;
 	float *m_Buffer;
-	static const glm::vec3 m_Colors[6];
+	static const glm::vec3 m_Colors[9];
 	std::vector<vertex> m_Vertices[6];
 	std::vector<vertex> m_Background;
 	graphics::VertexArray *m_VertexArray;
@@ -33,6 +33,7 @@ private:
 	void Init();
 	void CreateCube();
 	void CreateFace(std::vector<vertex> &vertices, glm::vec3 vertex);
+	void DrawFace(int face, int x, int y, int z, glm::vec3 Pos, glm::vec3 Neg);
 	void CreateRandomColor();
 	void FillData();
 	void CalculateSize();
